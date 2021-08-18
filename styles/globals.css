@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=block");
+
+::selection {
+  background: #947ce8;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
