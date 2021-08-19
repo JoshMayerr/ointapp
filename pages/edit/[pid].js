@@ -50,7 +50,7 @@ export default function Home({ uuid, url }) {
   return (
     <div className="w-full flex flex-col justify-between items-center h-screen py-16 font-body">
       <Head>
-        <title>Create Next App</title>
+        <title>Open In New Tab</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -59,10 +59,24 @@ export default function Home({ uuid, url }) {
       </div>
 
       {success ? (
-        <h1>success</h1>
+        <>
+          <div className="md:w-1/2 w-full px-6 md:px-0 sm:-mt-12 -mt-48 text-center">
+            <h1 className="text-3xl pb-4">Success!</h1>
+            <p>
+              Your oint is now initialized and ready to share your new tab link.
+            </p>
+            <p className="">
+              IMPORTANT: If you would like to edit your new tab link, then make
+              sure to save{" "}
+              <span className="text-blue-500 underline">
+                <a href={`/edit/${uuid}`}>this URL.</a>
+              </span>
+            </p>
+          </div>
+        </>
       ) : (
         <>
-          <div className="md:w-1/2 w-full px-6 md:px-0 -mt-12">
+          <div className="md:w-1/2 w-full px-6 md:px-0 sm:-mt-12 -mt-36">
             <label htmlFor="link" className="block text-lg self-start pb-2">
               <div className="md:flex-row flex flex-col md:space-x-3">
                 <span>Enter your new tab </span>
@@ -104,7 +118,7 @@ export default function Home({ uuid, url }) {
       )}
 
       <footer className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
+        <div className="max-w-7xl sm:mt-0 -mt-32 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
           <nav
             className="-mx-5 -my-2 flex flex-wrap justify-center"
             aria-label="Footer"
@@ -126,22 +140,6 @@ export default function Home({ uuid, url }) {
           </p>
         </div>
       </footer>
-
-      {/* <main>
-        {success ? (
-          <h1>success</h1>
-        ) : (
-          <>
-            <h1 className="title">Oint</h1>
-
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input type="url" {...register("newTabUrl", {})} />
-
-              <input type="submit" />
-            </form>
-          </>
-        )}
-      </main> */}
     </div>
   );
 }

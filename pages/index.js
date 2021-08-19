@@ -8,7 +8,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-full flex items-center justify-center">
+      <main className="h-full flex items-center justify-center sm:mt-0 -mt-16">
         <div className=" flex flex-col items-center space-y-8 ">
           <div className="w-44 -mr-3">
             <img src="/ointrealsvg.svg" alt="ointlogo" />
