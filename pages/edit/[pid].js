@@ -54,7 +54,7 @@ export default function Home({ uuid, url }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-44">
+      <div className="sm:w-44 w-40 -mr-2">
         <img src="/ointrealsvg.svg" alt="ointlogo" />
       </div>
 
@@ -76,7 +76,7 @@ export default function Home({ uuid, url }) {
         </>
       ) : (
         <>
-          <div className="md:w-1/2 w-full px-6 md:px-0 sm:-mt-12 -mt-36">
+          <div className="md:w-1/2 w-full px-6 md:px-0 sm:-mt-12 -mt-48">
             <label htmlFor="link" className="block text-lg self-start pb-2">
               <div className="md:flex-row flex flex-col md:space-x-3">
                 <span>Enter your new tab </span>
@@ -118,7 +118,7 @@ export default function Home({ uuid, url }) {
       )}
 
       <footer className="bg-white">
-        <div className="max-w-7xl sm:mt-0 -mt-32 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
+        <div className="max-w-7xl sm:mt-0 -mt-40 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
           <nav
             className="-mx-5 -my-2 flex flex-wrap justify-center"
             aria-label="Footer"
