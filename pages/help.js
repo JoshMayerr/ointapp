@@ -10,12 +10,22 @@ const faqs = [
   },
   {
     question: "How do I edit my open in new tab link?",
-    answer: "good question...",
+    answer:
+      "Make sure to save the EDIT URL as you initialize your OINT. Then navigate to that URL and edit the new tab link already there.",
   },
   {
     question: "How does someone scan my oint?",
     answer:
       "All they have to do is take their phone and tap the back-top of it to the oint. (similar to apple pay)",
+  },
+  {
+    question: "Are all phones compatitble to scan an oint?",
+    answer:
+      "All recently made phones are compatitble. More info here: https://www.unitag.io/nfc/is-my-phone-compatible-with-nfc",
+  },
+  {
+    question: "What can I put as my new tab link?",
+    answer: "Any link you can think of.",
   },
   // More questions...
 ];

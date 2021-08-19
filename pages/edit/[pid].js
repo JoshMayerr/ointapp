@@ -20,7 +20,7 @@ export default function Home({ uuid, url }) {
     if (url != data.newTabUrl) {
       // axios post to nextjs api with new url and id
       const sendData = { uuid, url: data.newTabUrl };
-      //console.log(sendData, "adouwdgo9wdgoawdgo");
+      console.log(sendData, "adouwdgo9wdgoawdgo");
       return axios
         .post(`/api/${uuid}`, sendData)
         .then(function(response) {})
@@ -42,9 +42,12 @@ export default function Home({ uuid, url }) {
   });
   const onSubmit = async (data) => {
     //show success message w/ conditional messaging
-    setSuccess(true);
-    reset();
-    return UpdateUrl(data);
+    if (url != data.newTabUrl) {
+      setSuccess(true);
+      reset();
+      await UpdateUrl(data);
+    }
+    return;
   };
 
   return (
@@ -67,9 +70,9 @@ export default function Home({ uuid, url }) {
             </p>
             <p className="">
               IMPORTANT: If you would like to edit your new tab link, then make
-              sure to save{" "}
+              sure to save this{" "}
               <span className="text-blue-500 underline">
-                <a href={`/edit/${uuid}`}>this URL.</a>
+                <a href={`/edit/${uuid}`}>edit URL.</a>
               </span>
             </p>
           </div>
@@ -98,6 +101,7 @@ export default function Home({ uuid, url }) {
                     type="url"
                     name="link"
                     id="link"
+                    placeholder="https://example.com"
                     className="focus:ring-black focus:border-black border-2 border-black block w-full rounded-sm rounded-l-sm pl-4 h-12 "
                     {...register("newTabUrl", {})}
                   />
@@ -148,7 +152,16 @@ export async function getServerSideProps(context) {
   const { db } = await connectToDatabase();
   const entries = db.collection("entries");
   const query = { uuid: pid };
-  const { uuid, url } = await entries.findOne(query);
+  const user = await entries.findOne(query);
+
+  if (user) {
+    var uuid = user.uuid;
+    var url = user.url;
+  } else {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: { uuid, url },
