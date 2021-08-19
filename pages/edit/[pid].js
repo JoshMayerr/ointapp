@@ -5,14 +5,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { ArrowRightIcon, InformationCircleIcon } from "@heroicons/react/solid";
-import ReactTooltip from "react-tooltip";
+import Link from "next/link";
 
 export default function Home({ uuid, url }) {
   const navigation = {
     main: [
-      { name: "help", href: "#" },
-      { name: "contact", href: "#" },
-      { name: "about", href: "#" },
+      { name: "help", href: "/help" },
+      { name: "contact", href: "/contact" },
+      { name: "about", href: "/about" },
     ],
   };
   const [success, setSuccess] = useState(false);
@@ -125,12 +125,11 @@ export default function Home({ uuid, url }) {
           >
             {navigation.main.map((item) => (
               <div key={item.name} className="px-5 py-2">
-                <a
-                  href={item.href}
-                  className="text-base text-black hover:text-gray-900"
-                >
-                  {item.name}
-                </a>
+                <Link href={item.href}>
+                  <a className="text-base text-black hover:text-gray-900">
+                    {item.name}
+                  </a>
+                </Link>
               </div>
             ))}
           </nav>
