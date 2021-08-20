@@ -42,7 +42,7 @@ export default function Presets({ selected, setSelected }) {
             {({ checked }) => (
               <>
                 <button
-                  className={`px-2 py-1 font-mono inline-flex ml-1 mr-1 mt-1 mb-1 focus:outline-none transition duration-300 ease-in-out ${
+                  className={`px-2 py-1 font-mono inline-flex  mt-1 mb-1 focus:outline-none transition duration-200 ease-in-out ${
                     checked
                       ? "bg-black border border-transparent"
                       : "border-black border"
