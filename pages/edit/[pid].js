@@ -1,13 +1,24 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { connectToDatabase } from "../../lib/mongodb";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { ArrowRightIcon, InformationCircleIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import Presets from "../../components/presets";
+import useUpdateEffect from "../../lib/useUpdateEffect";
 
 export default function Home({ uuid, url }) {
+  const [success, setSuccess] = useState(false);
+  const [selected, setSelected] = useState(url);
+  const [input, setInput] = useState(url);
+  const isFirstMount = useRef(true);
+
+  // console.log(url, "url");
+  // console.log(input, "input");
+  // console.log(selected, "selected");
+
   const navigation = {
     main: [
       { name: "help", href: "/help" },
@@ -15,9 +26,9 @@ export default function Home({ uuid, url }) {
       { name: "about", href: "/about" },
     ],
   };
-  const [success, setSuccess] = useState(false);
+
   const UpdateUrl = async (data) => {
-    if (url != data.newTabUrl) {
+    if (input != data.newTabUrl) {
       // axios post to nextjs api with new url and id
       const sendData = { uuid, url: data.newTabUrl };
       console.log(sendData, "adouwdgo9wdgoawdgo");
@@ -30,19 +41,30 @@ export default function Home({ uuid, url }) {
     }
   };
 
+  useEffect(() => {
+    if (!isFirstMount.current) {
+      setValue("newTabUrl", selected.real);
+    } else {
+      isFirstMount.current = false;
+    }
+    return () => {};
+  }, [selected]);
+
   const {
     register,
+    setValue,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({
     defaultValues: {
-      newTabUrl: url,
+      newTabUrl: input,
     },
+    mode: "onChange",
   });
   const onSubmit = async (data) => {
     //show success message w/ conditional messaging
-    if (url != data.newTabUrl) {
+    if (input != data.newTabUrl) {
       setSuccess(true);
       reset();
       await UpdateUrl(data);
@@ -117,6 +139,9 @@ export default function Home({ uuid, url }) {
                 </button>
               </div>
             </form>
+            <div className="mt-3">
+              <Presets selected={selected} setSelected={setSelected} />
+            </div>
           </div>
         </>
       )}
