@@ -6,7 +6,7 @@ import { PlusSmIcon, CheckIcon } from "@heroicons/react/solid";
 const presets = [
   {
     start: "www.linkt.ree/",
-    real: "https://linkt.ree/",
+    real: "https://linktr.ee/",
   },
   {
     start: "www.twitter.com/",
