@@ -8,24 +8,13 @@ import { ArrowRightIcon, InformationCircleIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import Presets from "../../components/presets";
 import useUpdateEffect from "../../lib/useUpdateEffect";
+import Footer from "../../components/footer";
 
 export default function Home({ uuid, url }) {
   const [success, setSuccess] = useState(false);
   const [selected, setSelected] = useState(url);
   const [input, setInput] = useState(url);
   const isFirstMount = useRef(true);
-
-  // console.log(url, "url");
-  // console.log(input, "input");
-  // console.log(selected, "selected");
-
-  const navigation = {
-    main: [
-      { name: "help", href: "/help" },
-      { name: "contact", href: "/contact" },
-      { name: "about", href: "/about" },
-    ],
-  };
 
   const UpdateUrl = async (data) => {
     if (input != data.newTabUrl) {
@@ -146,28 +135,7 @@ export default function Home({ uuid, url }) {
         </>
       )}
 
-      <footer className="bg-white">
-        <div className="max-w-7xl sm:mt-0 -mt-20 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
-          <nav
-            className="-mx-5 -my-2 flex flex-wrap justify-center"
-            aria-label="Footer"
-          >
-            {navigation.main.map((item) => (
-              <div key={item.name} className="px-5 py-2">
-                <Link href={item.href}>
-                  <a className="text-base text-black hover:text-gray-900">
-                    {item.name}
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </nav>
-
-          <p className="mt-6 text-center text-sm text-black">
-            &copy; 2021 oint.app
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

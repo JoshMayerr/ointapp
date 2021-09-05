@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import emailjs from "emailjs-com";
+import Footer from "../components/footer";
 
 export default function Home() {
   const {
@@ -55,8 +56,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative sm:pt-6">
-        <main className="mt-6 mx-auto max-w-7xl px-4 sm:px-6 lg:mt-6">
+      <div className="relative sm:pt-6 pb-10">
+        <main className="mt-6 mb-24 sm:mb-0 mx-auto max-w-7xl px-4 sm:px-6 lg:mt-6">
           <ToastContainer />
           <div className="text-center">
             <div className="md:max-w-5xl md:mx-auto flex flex-col items-center">
@@ -68,10 +69,10 @@ export default function Home() {
                 </span>
               </div>
               <div className="md:max-w-2xl">
-                <h1 className="text-6xl sm:text-5xl uppercase sm:mt-8">
+                <h1 className="text-6xl sm:text-5xl uppercase mt-4 sm:mt-8">
                   Share your Linktree Profile in the Physical World
                 </h1>
-                <p className="mt-8 sm:mt-10 text-base text-black sm:text-lg">
+                <p className="mt-12 sm:mt-10 text-base text-black sm:text-lg">
                   Next time you go out to dinner, a concert or a club, share
                   your profile with a quick tap, no typing, no app to download.
                   Just attach our nifty oint tag to your smartphone,
@@ -141,54 +142,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* <div className="bg-gradient-to-r w-full from-purple-300 via-pink-300 to-red-300  text-left mt-16 shadow-md rounded-lg">
-                <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
-                  <h2 className="text-3xl w-3/4 font-extrabold tracking-tight text-white md:text-2xl">
-                    <span className="block">Ready to dive in?</span>
-                  </h2>
-                  <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                    <div className="inline-flex">
-                      <div className=" lg:mx-0">
-                        <form
-                          onSubmit={handleSubmit(onSubmit)}
-                          className=" sm:flex"
-                        >
-                          <label htmlFor="email" className="sr-only">
-                            Email
-                          </label>
-                      
-                          <input
-                            type="text"
-                            name="Email"
-                            id="Email"
-                            autoComplete="email"
-                            {...register("Email", {
-                              required: true,
-                              pattern: /^\S+@\S+$/i,
-                            })}
-                            className="block w-full py-3 text-base rounded-md bg-transparent placeholder-black shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:flex-1 border-black"
-                            placeholder="Enter your email"
-                          />
-
-                          <button
-                            type="submit"
-                            className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
-                          >
-                            Sign Up
-                          </button>
-                        </form>
-                        <span>
-                          {errors.Email &&
-                            "Email is required and must be valid"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </div>
   );
