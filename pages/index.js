@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import emailjs from "emailjs-com";
 import Footer from "../components/footer";
+import { Player, PosterImage, ControlBar, PlayToggle } from "video-react";
 
 export default function Home() {
   const {
@@ -55,6 +56,10 @@ export default function Home() {
         <title>Open In New Tab</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <link
+        rel="stylesheet"
+        href="https://video-react.github.io/assets/video-react.css"
+      />
 
       <div className="relative sm:pt-6 pb-10">
         <main className="mt-6 mb-24 sm:mb-0 mx-auto max-w-7xl px-4 sm:px-6 lg:mt-6">
@@ -78,19 +83,12 @@ export default function Home() {
                   Just attach our nifty oint tag to your smartphone,
                 </p>
                 <div className="mt-12 relative mx-auto w-full lg:max-w-lg">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <iframe
-                      src="/vid1.mp4"
-                      frameBorder="0"
-                      allow="autoplay;"
-                    ></iframe>
-                  </div>
+                  <Player autoPlay muted poster="/thumb.jpg" src="/vid1.mp4">
+                    <ControlBar autoHide={false} disableDefaultControls={true}>
+                      <PlayToggle />
+                    </ControlBar>
+                  </Player>
                 </div>
-                {/* <p className="mt-8 sm:mt-10 text-base text-black sm:text-lg">
-                  The first 100 users to sign up for our early bird program will
-                  recieve their very own oint for 100% free. All you have to do
-                  is enter your email.
-                </p> */}
               </div>
               <div className="w-full text-left py-16">
                 <div className="px-6 py-6  border-4 border-black rounded-lg md:py-12 md:px-8 xl:flex xl:items-center">

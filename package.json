@@ -20,7 +20,8 @@
     "react-hook-form": "^7.12.2",
     "react-player": "^2.9.0",
     "react-toastify": "^7.0.4",
-    "react-tooltip": "^4.2.21"
+    "react-tooltip": "^4.2.21",
+    "video-react": "^0.14.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
