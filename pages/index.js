@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import emailjs from "emailjs-com";
 import Footer from "../components/footer";
 import { Player, PosterImage, ControlBar, PlayToggle } from "video-react";
+import "video-react/dist/video-react.css";
 
 export default function Home() {
   const {
@@ -56,10 +57,6 @@ export default function Home() {
         <title>Open In New Tab</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <link
-        rel="stylesheet"
-        href="https://video-react.github.io/assets/video-react.css"
-      />
 
       <div className="relative sm:pt-6 pb-10">
         <main className="mt-6 mb-24 sm:mb-0 mx-auto max-w-7xl px-4 sm:px-6 lg:mt-6">
@@ -84,7 +81,7 @@ export default function Home() {
                 </p>
                 <div className="mt-12 relative mx-auto w-full lg:max-w-lg">
                   <Player autoPlay muted poster="/thumb.jpg" src="/vid1.mp4">
-                    <ControlBar autoHide={false} disableDefaultControls={true}>
+                    <ControlBar disableDefaultControls={true}>
                       <PlayToggle />
                     </ControlBar>
                   </Player>
