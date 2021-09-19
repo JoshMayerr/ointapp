@@ -139,7 +139,7 @@ export default function Home() {
                         ))}
                       </Marquee>
                     </div>
-                    <div className=""></div>
+                    <div></div>
                   </div>
                   <h1 className="text-4xl sm:text-5xl md:text-7xl font-light">
                     <span className="">Any link you want.</span>{" "}
