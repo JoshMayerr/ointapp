@@ -28,7 +28,7 @@ export default function Home() {
     "spotify",
     "twitter",
     "linktr.ee",
-    "instagram",
+    "instagram.com",
     "swapd.me",
     "tiktok",
     "medium.com",
