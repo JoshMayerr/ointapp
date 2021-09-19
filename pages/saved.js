@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import emailjs from "emailjs-com";
-import Footer from "../components/footer";
+import Footer from "../components/Footerr";
 import { Player, PosterImage, ControlBar, PlayToggle } from "video-react";
 import "video-react/dist/video-react.css";
 
