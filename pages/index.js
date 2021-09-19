@@ -11,6 +11,9 @@ import Marquee from "react-fast-marquee";
 import ManyLink from "../components/manyLink";
 import Image from "next/image";
 import Feature from "../components/feature";
+import { v4 as uuidv4 } from "uuid";
+import FadeIn from "react-fade-in";
+import Fade from "react-reveal/Fade";
 
 export default function Home() {
   const links = [
@@ -41,7 +44,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative bg-gray-100 overflow-hidden font-body ">
+    <div className="relative bg-gray-100 overflow-hidden font-body select-none ">
       <div className="relative pb-16 sm:pb-24  ">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-2">
           <nav
@@ -49,12 +52,8 @@ export default function Home() {
             aria-label="Global"
           >
             <div className="flex items-center justify-between h-14 max-w-6xl mx-auto sm:px-12 px-6">
-              <div className="flex items-center flex-1 ">
-                <div className="flex items-center justify-between w-full">
-                  <div className="w-20">
-                    <img src="/ointrealsvg.svg" alt="ointlogo" />
-                  </div>
-                </div>
+              <div className="w-20">
+                <img src="/ointrealsvg.svg" alt="ointlogo" />
               </div>
 
               <div className=" flex items-center ">
@@ -74,19 +73,30 @@ export default function Home() {
         <div className="">
           <main className="relative  mt-10">
             <div className="mx-auto max-w-4xl px-4">
-              <div className="text-center h-screen flex items-center justify-center ">
-                <div className="-mt-24">
-                  <p className="mb-3 max-w-md mx-auto text-base  sm:text-lg md:text-xl font-medium">
-                    OintTag
-                  </p>
-                  <h1 className="text-xl sm:text-5xl md:text-7xl font-light">
-                    <span className="">
-                      Open a link in a new tab, in person. No app necessary.
-                    </span>{" "}
-                  </h1>
-                  <p className="mt-3 max-w-md mx-auto text-base  sm:text-lg md:mt-5 md:text-xl md:max-w-xl font-medium">
-                    (it's only $7)
-                  </p>
+              <div className="text-center h-screen flex flex-col items-center justify-center ">
+                <div className="relative">
+                  <div className="absolute animate-pulse filter blur-md -inset-1 sm:mb-20 mb-16 -mr-1 -mt-40 sm:-mt-48 bg-gradient-to-r from-blue-400 to-purple-400  rounded-full"></div>
+                  <div className="relative sm:mb-20 mb-16 -mr-1 -mt-40 sm:-mt-48 ">
+                    <div className="w-40 sm:w-48 rounded-full shadow-2xl">
+                      <img src="/blackcircle.svg" alt="ointlogo" />
+                    </div>
+                  </div>
+                </div>
+                <div className="">
+                  <FadeIn delay={120} transitionDuration={500}>
+                    <p className="mb-3 max-w-md mx-auto text-base  sm:text-lg md:text-xl font-medium">
+                      OintTag
+                    </p>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-light">
+                      <span className="">
+                        Open a link in a new tab, in person. No app necessary.
+                      </span>{" "}
+                    </h1>
+
+                    <p className="mt-3 max-w-md mx-auto text-base  sm:text-lg md:mt-5 md:text-xl md:max-w-xl font-medium">
+                      (it's only $7)
+                    </p>
+                  </FadeIn>
                 </div>
               </div>
             </div>
@@ -105,8 +115,10 @@ export default function Home() {
                 </div>
                 <div className="md:text-right text-center flex flex-col justify-between mt-8 md:-mt-8 md:w-1/2 py-4">
                   <span className="tracking-wider ">
-                    <h1 className="text-6xl ">A tap is all</h1>
-                    <h1 className="text-6xl">it takes.</h1>
+                    <Fade>
+                      <h1 className="text-6xl ">A tap is all</h1>
+                      <h1 className="text-6xl">it takes.</h1>
+                    </Fade>
                   </span>
 
                   <p className="font-mono pt-6 text-xl">
@@ -131,20 +143,32 @@ export default function Home() {
             <div className="text-center mx-auto max-w-5xl px-4">
               <div className="text-center h-screen flex items-center justify-center">
                 <div>
-                  <div className="mb-40 ">
+                  <div className="mb-20 flex flex-col items-center">
                     <div className="w-screen">
                       <Marquee gradient={false} speed={50}>
                         {links.map((link) => (
-                          <ManyLink name={link} key={link} />
+                          <ManyLink name={link} key={uuidv4()} />
                         ))}
                       </Marquee>
                     </div>
-                    <div></div>
+                    {/* <div className="w-40 -mt-24 sm:w-48 sm:-mt-28 shadow-2xl rounded-full z-50">
+                      <img src="/blackcircle.svg" alt="ointlogo" />
+                    </div> */}
+                    <div className="relative z-50">
+                      <div className="absolute filter blur-md -inset-1 -mt-24 sm:-mt-28 bg-gradient-to-r from-pink-400 to-purple-400  rounded-full"></div>
+                      <div className="relative ">
+                        <div className="w-40 -mt-24 sm:w-48 sm:-mt-28 rounded-full shadow-2xl ">
+                          <img src="/blackcircle.svg" alt="ointlogo" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-light">
-                    <span className="">Any link you want.</span>{" "}
+                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-light  ">
+                    <Fade>
+                      <span className="">Any link you want.</span>{" "}
+                    </Fade>
                   </h1>
-                  <p className="font-mono mt-3 max-w-sm mx-auto text-base sm:text-lg md:mt-5">
+                  <p className="font-mono mt-3 max-w-xs md:max-w-sm mx-auto text-base sm:text-lg md:mt-5">
                     The OintTag works with any URL. Simply enter it in during
                     the one step setup.
                   </p>{" "}
@@ -160,7 +184,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white">
-              <div className="text-center py-40 mx-auto max-w-5xl px-4 ">
+              <div className="text-center py-24 sm:py-40 mx-auto max-w-5xl px-4 ">
                 <div className="flex md:flex-row flex-col space-y-20 md:space-y-0 md:justify-between md:space-x-20">
                   <Feature
                     icon={<SparklesIcon />}
@@ -186,7 +210,7 @@ export default function Home() {
           </main>
         </div>
       </div>
-      <div className="pb-16">
+      <div className="pt-16 md:pt-0 pb-14">
         <Footerr />
       </div>
     </div>

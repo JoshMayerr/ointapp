@@ -9,6 +9,22 @@ module.exports = {
         mono: ["Space Mono"],
         body: ["Coolvetica"],
       },
+      animation: {
+        tilt: "tilt 10s infinite linear",
+      },
+      keyframes: {
+        tilt: {
+          "0%, 50%, 100%": {
+            transform: "scale(1)",
+          },
+          "25%": {
+            transform: "scale(0.75)",
+          },
+          "75%": {
+            transform: "scale(1.25)",
+          },
+        },
+      },
     },
   },
   variants: {

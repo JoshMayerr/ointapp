@@ -1,1 +1,14 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936.06 936.06"><defs><style>.cls-1{stroke:#231f20;stroke-miterlimit:10;}.cls-2{fill:#fff;}</style></defs><circle class="cls-1" cx="468.03" cy="468.03" r="467.53"/><polygon class="cls-2" points="279.13 277.26 279.13 326.16 610.75 324.63 610.75 656.94 658.81 656.94 658.81 277.26 279.13 277.26"/><polygon class="cls-2" points="576.11 324.63 279.13 620.09 279.13 656.94 315.29 656.94 610.75 358.76 613.3 324.63 576.11 324.63"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 936.1 936.1" style="enable-background:new 0 0 936.1 936.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#231F20;stroke-miterlimit:10;}
+	.st1{fill:#FEFFFF;}
+</style>
+<g>
+	<circle class="st0" cx="468" cy="468" r="467.5"/>
+	<polygon class="st1" points="658.8,277.3 658.8,656.9 610.8,656.9 610.8,358.8 315.3,656.9 279.1,656.9 279.1,620.1 576,324.8 
+		279.1,326.2 279.1,277.3 	"/>
+</g>
+</svg>
