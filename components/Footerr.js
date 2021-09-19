@@ -10,7 +10,7 @@ export default function Footerr() {
   };
   return (
     <footer className="">
-      <div className="max-w-7xl sm:mt-0 -mt-20 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-7xl sm:mt-0 -mt-20 mx-auto px-4 overflow-hidden sm:px-6 lg:px-8 tracking-wider">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
