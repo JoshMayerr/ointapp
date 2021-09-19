@@ -79,13 +79,13 @@ export default function Home() {
                   <p className="mb-3 max-w-md mx-auto text-base  sm:text-lg md:text-xl font-medium">
                     OintTag
                   </p>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-light">
+                  <h1 className="text-xl sm:text-5xl md:text-7xl font-light">
                     <span className="">
-                      Open a link in a new tab, in person. No app necesarry.
+                      Open a link in a new tab, in person. No app necessary.
                     </span>{" "}
                   </h1>
                   <p className="mt-3 max-w-md mx-auto text-base  sm:text-lg md:mt-5 md:text-xl md:max-w-xl font-medium">
-                    (it's only 7$)
+                    (it's only $7)
                   </p>
                 </div>
               </div>
@@ -103,13 +103,13 @@ export default function Home() {
                     ></iframe>
                   </div>
                 </div>
-                <div className="md:text-right text-center flex flex-col justify-between mt-8 md:-mt-6 md:w-1/2 py-4">
-                  <span className="tracking-wider">
-                    <h1 className="text-5xl ">A tap is all</h1>
-                    <h1 className="text-5xl">it takes.</h1>
+                <div className="md:text-right text-center flex flex-col justify-between mt-8 md:-mt-8 md:w-1/2 py-4">
+                  <span className="tracking-wider ">
+                    <h1 className="text-6xl ">A tap is all</h1>
+                    <h1 className="text-6xl">it takes.</h1>
                   </span>
 
-                  <p className="font-mono pt-6">
+                  <p className="font-mono pt-6 text-xl">
                     Simply tap a phone to an OintTag and instantly open a link
                     in a new tab. No more tediously spelling out your Instagram
                     username or typing into a friend's phone, it's lighting
@@ -141,10 +141,10 @@ export default function Home() {
                     </div>
                     <div className=""></div>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-light">
+                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-light">
                     <span className="">Any link you want.</span>{" "}
                   </h1>
-                  <p className="font-mono mt-3 max-w-sm mx-auto text-base sm:text-md md:mt-5">
+                  <p className="font-mono mt-3 max-w-sm mx-auto text-base sm:text-lg md:mt-5">
                     The OintTag works with any URL. Simply enter it in during
                     the one step setup.
                   </p>{" "}
