@@ -10,9 +10,9 @@ import {
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import Image from "next/image";
-import Presets from "../../components/Presets";
+import Presets from "../../components/presets";
 import useUpdateEffect from "../../lib/useUpdateEffect";
-import Footerr from "../../components/Footerr";
+import Footerr from "../../components/footerr";
 
 export default function Home({ uuid, url }) {
   const [success, setSuccess] = useState(false);

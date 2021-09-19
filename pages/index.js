@@ -6,11 +6,11 @@ import {
   LightningBoltIcon,
   OfficeBuildingIcon,
 } from "@heroicons/react/outline";
-import Footerr from "../components/Footerr";
+import Footerr from "../components/footerr";
 import Marquee from "react-fast-marquee";
-import ManyLink from "../components/ManyLink";
+import ManyLink from "../components/manyLink";
 import Image from "next/image";
-import Feature from "../components/Feature";
+import Feature from "../components/feature";
 
 export default function Home() {
   const links = [
@@ -139,7 +139,7 @@ export default function Home() {
                         ))}
                       </Marquee>
                     </div>
-                    <div className="aw"></div>
+                    <div></div>
                   </div>
                   <h1 className="text-4xl sm:text-5xl md:text-7xl font-light">
                     <span className="">Any link you want.</span>{" "}
