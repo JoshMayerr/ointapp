@@ -30,7 +30,7 @@ export default function Presets({ selected, setSelected }) {
   return (
     <RadioGroup value={selected} onChange={setSelected}>
       <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between ">
         {presets.map((plan) => (
           <RadioGroup.Option
             key={plan.start}

@@ -4,11 +4,15 @@ import { connectToDatabase } from "../../lib/mongodb";
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { ArrowRightIcon, InformationCircleIcon } from "@heroicons/react/solid";
+import {
+  ArrowRightIcon,
+  InformationCircleIcon,
+} from "@heroicons/react/outline";
 import Link from "next/link";
-import Presets from "../../components/presets";
+import Image from "next/image";
+import Presets from "../../components/Presets";
 import useUpdateEffect from "../../lib/useUpdateEffect";
-import Footer from "../../components/footer";
+import Footerr from "../../components/Footerr";
 
 export default function Home({ uuid, url }) {
   const [success, setSuccess] = useState(false);
@@ -62,15 +66,17 @@ export default function Home({ uuid, url }) {
   };
 
   return (
-    <div className="w-full flex flex-col justify-between items-center h-screen py-16 font-body">
+    <div className="w-full flex flex-col justify-between items-center h-screen py-16 font-body tracking-wider">
       <Head>
         <title>Open In New Tab</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="sm:w-44 w-40 -mr-2">
-        <img src="/ointrealsvg.svg" alt="ointlogo" />
-      </div>
+      <Link href="/">
+        <a className="sm:w-60 w-60 -mr-2">
+          <img src="/ointrealsvg.svg" alt="ointlogo" />
+        </a>
+      </Link>
 
       {success ? (
         <>
@@ -92,16 +98,15 @@ export default function Home({ uuid, url }) {
         <>
           <div className="md:w-1/2 w-full px-6 md:px-0 sm:-mt-12 -mt-36">
             <label htmlFor="link" className="block text-lg self-start pb-2">
-              <div className="md:flex-row flex flex-col md:space-x-3">
-                <span>Enter your new tab </span>
-                <span className="flex">
-                  link here{" "}
-                  <span className="ml-3 ">
-                    <a href="#">
+              <div className="md:flex-row flex">
+                <span>Enter your new tab link here </span>
+                <span className="ml-1">
+                  <Link href="/help">
+                    <a>
                       {" "}
-                      <InformationCircleIcon className="w-5 h-5 mt-1.5" />
+                      <InformationCircleIcon className="w-5 h-5 mt-1" />
                     </a>
-                  </span>
+                  </Link>
                 </span>
               </div>
             </label>
@@ -113,7 +118,7 @@ export default function Home({ uuid, url }) {
                     name="link"
                     id="link"
                     placeholder="https://example.com"
-                    className="focus:ring-black focus:border-black border-2 border-black block w-full rounded-sm rounded-l-sm pl-4 h-12 "
+                    className="focus:ring-black focus:border-black border-2 border-black block w-full rounded-sm rounded-l-sm pl-4 h-12 tracking-tight text-md font-mono"
                     {...register("newTabUrl", {})}
                   />
                 </div>
@@ -135,7 +140,7 @@ export default function Home({ uuid, url }) {
         </>
       )}
 
-      <Footer />
+      <Footerr />
     </div>
   );
 }
