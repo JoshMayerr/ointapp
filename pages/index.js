@@ -111,14 +111,13 @@ export default function Home() {
             <div className="bg-white">
               <div className="text-center py-60 mx-auto max-w-5xl px-4 flex md:justify-between flex-col md:flex-row">
                 <div className="relative md:w-1/3 w-full ">
-                  <div className="aspect-w-9 aspect-h-9 overflow-hidden">
-                    <iframe
+                  <div className="aspect-w-9 aspect-h-9">
+                    <img
                       src="/promo.gif"
                       width="100%"
                       height="100%"
-                      className="absolute"
-                      frameBorder="0"
-                    ></iframe>
+                      className=" "
+                    />
                   </div>
                 </div>
                 <div className="md:text-right text-center flex flex-col justify-between mt-8 md:-mt-8 md:w-1/2 py-4">
