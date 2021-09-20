@@ -1,10 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
 import {
   SparklesIcon,
   LightningBoltIcon,
   OfficeBuildingIcon,
+  ArrowSmRightIcon,
 } from "@heroicons/react/outline";
 import Footerr from "../components/footerr";
 import Marquee from "react-fast-marquee";
@@ -23,16 +22,16 @@ export default function Home() {
     "swapd.me",
     "tiktok",
     "medium.com",
-    "facebook",
+    "solo.to",
     "music.apple.com",
     "reddit",
     "youtube.com",
-    "depop.com",
+    "beacons.ai",
     "spotify",
     "twitter",
     "linktr.ee",
     "instagram.com",
-    "swapd.me",
+    "flow.page",
     "tiktok",
     "medium.com",
     "facebook",
@@ -60,7 +59,7 @@ export default function Home() {
                 <span className="inline-flex rounded-full shadow">
                   <a
                     href="#"
-                    className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-400 hover:bg-indigo-300 transition duration-200 ease-in-out"
+                    className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out"
                   >
                     Buy Now
                   </a>
@@ -83,7 +82,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="">
-                  <FadeIn delay={120} transitionDuration={500}>
+                  <FadeIn delay={200} transitionDuration={500}>
                     <p className="mb-3 max-w-md mx-auto text-base  sm:text-lg md:text-xl font-medium">
                       OintTag
                     </p>
@@ -93,9 +92,18 @@ export default function Home() {
                       </span>{" "}
                     </h1>
 
-                    <p className="mt-3 max-w-md mx-auto text-base  sm:text-lg md:mt-5 md:text-xl md:max-w-xl font-medium">
-                      (it's only $7)
-                    </p>
+                    <button
+                      type="button"
+                      className="mt-6 -mr-1 inline-flex items-center px-3 py-2 text-lg leading-none font-medium transition duration-200 ease-in-out text-indigo-500 border-b-2 hover:border-indigo-500 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      Shop for $7
+                      <div className="">
+                        <ArrowSmRightIcon
+                          className="ml-1 -mr-0.5 h-5 w-5 "
+                          aria-hidden="true"
+                        />
+                      </div>
+                    </button>
                   </FadeIn>
                 </div>
               </div>
@@ -131,7 +139,7 @@ export default function Home() {
                     <span className="inline-flex rounded-full shadow">
                       <a
                         href="#"
-                        className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-400 hover:bg-indigo-300 transition duration-200 ease-in-out"
+                        className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out"
                       >
                         Buy Now
                       </a>
@@ -175,7 +183,7 @@ export default function Home() {
                   <div className="inline-flex rounded-full shadow mt-6 ">
                     <a
                       href="#"
-                      className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-400 hover:bg-indigo-300 transition duration-200 ease-in-out"
+                      className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out"
                     >
                       Buy Now
                     </a>
@@ -189,20 +197,25 @@ export default function Home() {
                   <Feature
                     icon={<SparklesIcon />}
                     title="No app required"
-                    desc="AirTag is designed to keep going more than a year on a
-                      standard battery you can easily replace."
+                    desc="Neither you or the person your sharing the link with will ever need to download an app."
                   />
                   <Feature
                     icon={<LightningBoltIcon />}
                     title="One step setup"
-                    desc="AirTag is designed to keep going more than a year on a
-                      standard battery you can easily replace."
+                    desc="Simply scan the tag, enter any link, and the tag is good to go."
                   />
                   <Feature
                     icon={<OfficeBuildingIcon />}
                     title="For Businesses"
-                    desc="AirTag is designed to keep going more than a year on a
-                      standard battery you can easily replace."
+                    desc={
+                      <span>
+                        OintTags are perfect for high-traffic social events. For
+                        large orders or custom tags{" "}
+                        <a href="#" className="text-indigo-500 hover:underline">
+                          see here.
+                        </a>
+                      </span>
+                    }
                   />
                 </div>
               </div>
