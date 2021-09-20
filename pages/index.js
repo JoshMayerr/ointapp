@@ -78,7 +78,7 @@ export default function Home() {
                   <div className="absolute animate-pulse filter blur-md -inset-1 sm:mb-20 mb-16 -mr-1 -mt-40 sm:-mt-48 bg-gradient-to-r from-blue-400 to-purple-400  rounded-full"></div>
                   <div className="relative sm:mb-20 mb-16 -mr-1 -mt-40 sm:-mt-48 ">
                     <div className="w-40 sm:w-48 rounded-full shadow-2xl">
-                      <img src="/blackcircle.svg" alt="ointlogo" />
+                      <img src="/whitecircle.svg" alt="ointlogo" />
                     </div>
                   </div>
                 </div>
@@ -154,11 +154,11 @@ export default function Home() {
                     {/* <div className="w-40 -mt-24 sm:w-48 sm:-mt-28 shadow-2xl rounded-full z-50">
                       <img src="/blackcircle.svg" alt="ointlogo" />
                     </div> */}
-                    <div className="relative z-50">
+                    <div className="relative z-10">
                       <div className="absolute filter blur-md -inset-1 -mt-24 sm:-mt-28 bg-gradient-to-r from-pink-400 to-purple-400  rounded-full"></div>
                       <div className="relative ">
                         <div className="w-40 -mt-24 sm:w-48 sm:-mt-28 rounded-full shadow-2xl ">
-                          <img src="/blackcircle.svg" alt="ointlogo" />
+                          <img src="/whitecircle.svg" alt="ointlogo" />
                         </div>
                       </div>
                     </div>
