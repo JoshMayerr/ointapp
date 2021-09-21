@@ -72,11 +72,11 @@ export default function Home() {
         <div className="">
           <main className="relative  mt-10">
             <div className="mx-auto max-w-4xl px-4">
-              <div className="text-center h-screen flex flex-col items-center justify-center ">
+              <div className="text-center h-screen flex flex-col items-center justify-center">
                 <div className="relative">
-                  <div className="absolute animate-pulse filter blur-md -inset-1 xl:mb-20 lg:mb-12 md:mb-8 sm:mb-4 mb-16 -mr-1 -mt-40 sm:-mt-20 xl:-mt-48 bg-gradient-to-r from-blue-400 to-purple-400  rounded-full"></div>
-                  <div className="relative xl:mb-20 lg:mb-12 md:mb-8 sm:mb-4 mb-16 -mr-1 -mt-40 sm:-mt-20 xl:-mt-48">
-                    <div className="w-40 xl:w-48 rounded-full shadow-2xl">
+                  <div className="absolute animate-pulse filter blur-md -inset-1 xl:mb-12 lg:mb-12 md:mb-8 sm:mb-4 mb-16 -mr-1 -mt-40 sm:-mt-20 xl:-mt-48 bg-gradient-to-r from-blue-400 to-purple-400  rounded-full"></div>
+                  <div className="relative xl:mb-12 lg:mb-12 md:mb-8 sm:mb-4 mb-16 -mr-1 -mt-40 sm:-mt-20 xl:-mt-48 ">
+                    <div className="w-40 xl:w-44 rounded-full shadow-2xl">
                       <img src="/whitecircle.svg" alt="ointlogo" />
                     </div>
                   </div>
@@ -86,7 +86,7 @@ export default function Home() {
                     <p className="mb-3 max-w-md mx-auto text-base  sm:text-lg md:text-xl font-medium">
                       OintTag
                     </p>
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xlfont-light">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl">
                       <span className="">
                         Open a link in a new tab, in person. No app necessary.
                       </span>{" "}
