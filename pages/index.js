@@ -13,6 +13,7 @@ import Feature from "../components/feature";
 import { v4 as uuidv4 } from "uuid";
 import FadeIn from "react-fade-in";
 import Fade from "react-reveal/Fade";
+import Link from "next/link";
 
 export default function Home() {
   const links = [
@@ -57,12 +58,11 @@ export default function Home() {
 
               <div className=" flex items-center ">
                 <span className="inline-flex rounded-full shadow">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out"
-                  >
-                    Buy Now
-                  </a>
+                  <Link href="https://shop.oint.app">
+                    <a className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out">
+                      Buy Now
+                    </a>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -92,18 +92,17 @@ export default function Home() {
                       </span>{" "}
                     </h1>
 
-                    <button
-                      type="button"
-                      className="mt-6 -mr-1 inline-flex items-center px-3 py-2 text-lg leading-none font-medium transition duration-200 ease-in-out text-indigo-500 border-b-2 hover:border-indigo-500 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    >
-                      Shop for $7
-                      <div className="">
-                        <ArrowSmRightIcon
-                          className="ml-1 -mr-0.5 h-5 w-5 "
-                          aria-hidden="true"
-                        />
-                      </div>
-                    </button>
+                    <Link href="https://shop.oint.app">
+                      <a className="mt-6 -mr-1 inline-flex items-center px-3 py-2 text-lg leading-none font-medium transition duration-200 ease-in-out text-indigo-500 border-b-2 hover:border-indigo-500 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Shop for $7
+                        <div className="">
+                          <ArrowSmRightIcon
+                            className="ml-1 -mr-0.5 h-5 w-5 "
+                            aria-hidden="true"
+                          />
+                        </div>
+                      </a>
+                    </Link>
                   </FadeIn>
                 </div>
               </div>
@@ -136,12 +135,11 @@ export default function Home() {
                   </p>
                   <div className="pt-8">
                     <span className="inline-flex rounded-full shadow">
-                      <a
-                        href="#"
-                        className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out"
-                      >
-                        Buy Now
-                      </a>
+                      <Link href="https://shop.oint.app">
+                        <a className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out">
+                          Buy Now
+                        </a>
+                      </Link>
                     </span>
                   </div>
                 </div>
@@ -210,9 +208,11 @@ export default function Home() {
                       <span>
                         OintTags are perfect for high-traffic social events. For
                         large orders or custom tags{" "}
-                        <a href="#" className="text-indigo-500 hover:underline">
-                          see here.
-                        </a>
+                        <Link href="/contact">
+                          <a className="text-indigo-500 hover:underline">
+                            see here.
+                          </a>
+                        </Link>
                       </span>
                     }
                   />
