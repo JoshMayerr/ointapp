@@ -1,5 +1,6 @@
 import { connectToDatabase } from "../../lib/mongodb";
 import isUUID from "is-uuid";
+import requestIp from "request-ip";
 
 export default async (req, res) => {
   const { db } = await connectToDatabase();
@@ -8,7 +9,6 @@ export default async (req, res) => {
   if (isUUID.v4(uuid)) {
     const entries = db.collection("entries");
     const query = { uuid: uuid };
-
     const user = await entries.findOne(query);
 
     if (user) {
@@ -27,6 +27,16 @@ export default async (req, res) => {
         }
       } else {
         if (user.url) {
+          try {
+            await entries.updateOne(
+              { uuid: user.uuid },
+              {
+                $set: { counter: user.counter + 1 },
+              }
+            );
+          } catch (error) {
+            console.error(error);
+          }
           return res.redirect(user.url);
         } else {
           return res.redirect(`/edit/${uuid}`);
@@ -34,16 +44,19 @@ export default async (req, res) => {
       }
     } else {
       try {
+        const clientIp = requestIp.getClientIp(req);
         await entries.insertOne({
           uuid: uuid,
           url: "",
+          date: new Date(),
+          ip: clientIp,
+          counter: 0,
         });
         return res.redirect(`/edit/${uuid}`);
       } catch (error) {
         console.error(error);
         return res.status(500).end();
       }
-      // insert one with new uuid redirect to edit/uuid
     }
   }
 };
