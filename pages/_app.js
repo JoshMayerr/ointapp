@@ -1,8 +1,14 @@
 // import "tailwindcss/tailwind.css";
+import Meta from "../components/meta";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Meta />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;

@@ -1,5 +1,3 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
 import { connectToDatabase } from "../../lib/mongodb";
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
@@ -9,10 +7,9 @@ import {
   InformationCircleIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
-import Image from "next/image";
-import Presets from "../../components/presets";
-import useUpdateEffect from "../../lib/useUpdateEffect";
 import Footerr from "../../components/footerr";
+import QRCode from "react-qr-code";
+import Presets from "../../components/presets";
 
 export default function Home({ uuid, url }) {
   const [success, setSuccess] = useState(false);
@@ -67,11 +64,6 @@ export default function Home({ uuid, url }) {
 
   return (
     <div className="w-full flex flex-col justify-between items-center h-screen py-16 font-body tracking-wider">
-      <Head>
-        <title>Open In New Tab</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Link href="/">
         <a className="sm:w-60 w-60 -mr-2">
           <img src="/ointrealsvg.svg" alt="ointlogo" />
@@ -92,6 +84,9 @@ export default function Home({ uuid, url }) {
                 <a href={`/edit/${uuid}`}>edit URL.</a>
               </span>
             </p>
+            {/* <div className="w-24">
+              <QRCode value={`https://oint.app/edit/${uuid}`} />
+            </div> */}
           </div>
         </>
       ) : (
@@ -133,6 +128,36 @@ export default function Home({ uuid, url }) {
                 </button>
               </div>
             </form>
+            {/* <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="mt-1  rounded-sm  shadow-sm">
+                <div className="mt-1 relative rounded-md shadow-sm">
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <label htmlFor="country" className="sr-only">
+                      Country
+                    </label>
+                    <select
+                      id="country"
+                      name="country"
+                      className="focus:ring-indigo-500 focus:border-indigo-500 bg-gray-100 border-black border-2 h-full py-0 pl-3 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm rounded-md"
+                    >
+                      <option>Snapchat @</option>
+                      <option>CA</option>
+                      <option>EU</option>
+                    </select>
+                  </div>
+                  <input
+                    className="focus:ring-indigo-500 focus:border-indigo-500 border-2 border-black block w-full pl-16 sm:text-sm rounded-md tracking-tight text-sm font-mono"
+                    type="url"
+                    name="link"
+                    id="link"
+                    placeholder="https://example.com"
+                    // className="focus:ring-black focus:border-black border-2 border-black block w-full rounded-sm rounded-l-sm pl-4 h-12 tracking-tight text-md font-mono"
+                    {...register("newTabUrl", {})}
+                  />
+                </div>
+              </div>
+            </form> */}
+
             <div className="mt-3">
               <Presets selected={selected} setSelected={setSelected} />
             </div>
