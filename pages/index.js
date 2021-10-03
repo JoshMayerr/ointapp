@@ -92,9 +92,13 @@ export default function Home() {
                       </span>{" "}
                     </h1>
 
-                    <Link href="https://instagram.com/ointapp" target="_blank">
-                      <a className="mt-6 -mr-1 inline-flex items-center px-3 py-2 text-lg leading-none font-medium transition duration-200 ease-in-out text-indigo-500  hover:text-indigo-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Want one for free? Follow and DM us on Instagram 🠚
+                    <Link href="https://instagram.com/ointapp">
+                      <a
+                        target="_blank"
+                        className="mt-6 -mr-1 px-3 inline-block text-lg font-medium transition duration-200 ease-in-out text-indigo-500  hover:text-indigo-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      >
+                        Want one for free? Follow and DM us on{" "}
+                        <span className="underline">Instagram</span>{" "}
                       </a>
                     </Link>
                   </FadeIn>

@@ -80,7 +80,7 @@ export default function EnterLinkForm({
             </button>{" "}
             {success && (
               <p className="tracking-wide text-sm">
-                Success! Your OintTag is ready to share. <br /> Start tapping!
+                Success! Your OintTag is ready to share. <br /> Tap it again!
               </p>
             )}
           </div>
