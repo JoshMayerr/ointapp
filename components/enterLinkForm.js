@@ -15,7 +15,7 @@ export default function EnterLinkForm({
   return (
     <>
       <div className="absolute left-0 right-0 mx-auto w-3/4 bottom-0 pb-16 text-left tracking-wide">
-        <div className="max-w-sm w-full bg-white filter drop-shadow-md rounded-full pointer-events-auto overflow-hidden">
+        <div className="max-w-sm w-full bg-white shadow-md rounded-full pointer-events-auto overflow-hidden">
           <div className="p-4 px-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -61,7 +61,7 @@ export default function EnterLinkForm({
                   type="text"
                   name="input"
                   id="input"
-                  className="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md tracking-wide focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-black placeholder-gray-400"
+                  className="flex-1 min-w-0 block w-full px-3 py-3 rounded-none rounded-r-md tracking-wide focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-black placeholder-gray-400"
                   placeholder={currentLink.placeholder}
                   value={input}
                   onChange={(e) => {
