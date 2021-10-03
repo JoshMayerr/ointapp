@@ -30,11 +30,7 @@ export default function LinkChoice({
               </p>
             </div>
             <div className="flex-shrink-0 pr-2">
-              <div
-                type="button"
-                className="w-8 h-8 inline-flex items-center justify-center text-black rounded-full"
-              >
-                <span className="sr-only">Open options</span>
+              <div className="w-8 h-8 inline-flex items-center justify-center text-black">
                 <ArrowRightIcon className="w-5 h-5" aria-hidden="true" />
               </div>
             </div>
