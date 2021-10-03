@@ -17,7 +17,7 @@ export default async (req, res) => {
           await entries.updateOne(
             { uuid: req.body.uuid },
             {
-              $set: { url: req.body.url },
+              $set: { url: req.body.url, urlType: req.body.urlType },
             }
           );
           return res.status(200).end();
@@ -48,6 +48,7 @@ export default async (req, res) => {
         await entries.insertOne({
           uuid: uuid,
           url: "",
+          urlType: "",
           date: new Date(),
           ip: clientIp,
           counter: 0,
