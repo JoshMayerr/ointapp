@@ -25,7 +25,7 @@ const links = [
   },
   {
     name: "Snapchat",
-    URL: "https://snapchat.com/",
+    URL: "https://snapchat.com/@",
     userFaceURL: "@username",
     prefix: "@",
     placeholder: "username",
