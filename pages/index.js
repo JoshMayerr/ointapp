@@ -92,9 +92,9 @@ export default function Home() {
                       </span>{" "}
                     </h1>
 
-                    <Link href="https://shop.oint.app">
+                    <Link href="https://instagram.com/ointapp" target="_blank">
                       <a className="mt-6 -mr-1 inline-flex items-center px-3 py-2 text-lg leading-none font-medium transition duration-200 ease-in-out text-indigo-500 border-b-2 hover:border-indigo-500 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Shop for $7
+                        Want one for free? Follow and DM us on Instagram
                         <div className="">
                           <ArrowSmRightIcon
                             className="ml-1 -mr-0.5 h-5 w-5 "

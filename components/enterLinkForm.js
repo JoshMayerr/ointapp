@@ -44,7 +44,7 @@ export default function EnterLinkForm({
             }}
             className="inline-flex items-center p-2 border border-transparent filter drop-shadow-md text-black rounded-full  bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            <ArrowSmLeftIcon className="h-6 w-6" aria-hidden="true" />
+            <ArrowSmLeftIcon className="h-8 w-8" aria-hidden="true" />
           </button>
         </div>
         <FadeIn transitionDuration={600}>
