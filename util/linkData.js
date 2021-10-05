@@ -80,6 +80,22 @@ const links = [
     enter: "Spotify URL",
   },
   {
+    name: "Beacons",
+    URL: "https://beacons.ai/",
+    userFaceURL: "beacons.ai/",
+    prefix: "beacons.ai/",
+    placeholder: "username",
+    enter: "Beacons URL",
+  },
+  {
+    name: "Flow Page",
+    URL: "https://www.flowcode.com/page/",
+    userFaceURL: "flowcode.com/",
+    prefix: "flowcode.com/page/",
+    placeholder: "username",
+    enter: "Flow Page URL",
+  },
+  {
     name: "Apple Music",
     URL: "https://music.apple.com/",
     userFaceURL: "music.apple.com/",
