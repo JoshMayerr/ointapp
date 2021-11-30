@@ -24,13 +24,12 @@ const faqs = [
         answer:
           "Start tapping!",
     },
-    // More questions...
   ]
 
   export default function Setup() {
     return (
       <div className="">
-        <div className="max-w-7xl mx-auto py-12 px-6 sm:px-6 lg:py-16 lg:px-8 font-body">
+        <div className="max-w-7xl md:max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:py-16 lg:px-8 font-body">
           <h2 className="text-6xl text-black text-center">OintTag Setup</h2>
           <div className="mt-4">
             <dl className="divide-y divide-gray-200 font-mono">
