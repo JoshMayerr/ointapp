@@ -22,8 +22,8 @@ const faqs = [
         id: 4,
         question: "Step 4.",
         answer:
-          "Start tapping!",k
-    },k
+          "Start tapping!",
+    },
     // More questions...
   ]
 

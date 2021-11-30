@@ -14,6 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 import FadeIn from "react-fade-in";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
+import BuyButton from "../components/buyButton";
 
 export default function Home() {
   const links = [
@@ -45,7 +46,7 @@ export default function Home() {
 
   return (
     <div className="relative bg-gray-100 overflow-hidden font-body select-none ">
-      <div className="relative pb-16 sm:pb-24  ">
+      <div className="relative pb-16 sm:pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-2">
           <nav
             className="backdrop-filter backdrop-blur-sm bg-opacity-30 border-b border-gray-300 bg-white z-50 firefox:bg-opacity-90  fixed inset-x-0 top-0"
@@ -57,17 +58,13 @@ export default function Home() {
               </div>
 
               <div className=" flex items-center ">
-                <span className="inline-flex rounded-full shadow">
-                  <Link href="https://shop.oint.app">
-                    <a className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out">
-                      Buy Now
-                    </a>
-                  </Link>
-                </span>
+                <BuyButton />
               </div>
             </div>
           </nav>
         </div>
+
+
 
         <div className="">
           <main className="relative  mt-10">
@@ -132,13 +129,7 @@ export default function Home() {
                     fast.
                   </p>
                   <div className="pt-8">
-                    <span className="inline-flex rounded-full shadow">
-                      <Link href="https://shop.oint.app">
-                        <a className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out">
-                          Buy Now
-                        </a>
-                      </Link>
-                    </span>
+                    <BuyButton />
                   </div>
                 </div>
               </div>
@@ -176,11 +167,7 @@ export default function Home() {
                     the one step setup.
                   </p>{" "}
                   <div className="inline-flex rounded-full shadow mt-6 ">
-                    <Link href="https://shop.oint.app">
-                      <a className="inline-flex items-center px-4 py-1 border border-transparent text-base tracking-wider font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-400 transition duration-200 ease-in-out">
-                        Buy Now
-                      </a>
-                    </Link>
+                    <BuyButton />
                   </div>
                 </div>
               </div>

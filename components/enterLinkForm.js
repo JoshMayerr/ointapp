@@ -76,7 +76,7 @@ export default function EnterLinkForm({
               type="button"
               className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-lg tracking-wide font-medium rounded-lg text-white bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              Submit
+                Save
             </button>{" "}
             {success && (
               <p className="tracking-wide text-sm">

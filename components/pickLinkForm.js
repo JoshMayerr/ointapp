@@ -46,7 +46,7 @@ export default function PickLinkForm({
             What should the OintTag open?
           </h1>
           <p className="mt-4 tracking-wide">
-            Don't worry, this can be changed any time.
+            Don't worry, this can be changed any time. As long as you save this page.
           </p>
         </div>
         {/* <div className="mb-12 w-full">
