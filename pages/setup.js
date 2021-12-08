@@ -30,7 +30,41 @@ const faqs = [
     return (
       <div className="">
         <div className="max-w-7xl md:max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:py-16 lg:px-8 font-body">
-          <h2 className="text-6xl text-black text-center">OintTag Setup</h2>
+          <h2 className="text-6xl text-black text-center mb-12">OintTag Setup</h2>
+
+          <div
+        className="sm:hidden"
+        style={{
+          position: "relative",
+          paddingBottom: "56.25%" /* 16:9 */,
+          height: 0,
+        }}
+      >
+        <iframe
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+          src="https://www.youtube.com/embed/eerWmRocBEA"
+          allowFullScreen
+          style={{ border: 0 }}
+          sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
+        />
+      </div>
+      <div className="hidden sm:block">
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/eerWmRocBEA"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
+
+
           <div className="mt-4">
             <dl className="divide-y divide-gray-200 font-mono">
               {faqs.map((faq) => (
