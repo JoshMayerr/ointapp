@@ -27,7 +27,7 @@ export default function Footerr() {
         </nav>
 
         <p className="mt-6 text-center text-sm text-black">
-          &copy; 2021 oint.app
+          &copy; 2021 <a href="/">oint.app</a>
         </p>
         <p className="mt-2 -mr-2 text-center text-xs">patent pending</p>
       </div>

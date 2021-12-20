@@ -1,3 +1,5 @@
+import Footerr from "../components/footerr"
+
 /* This example requires Tailwind CSS v2.0+ */
 const faqs = [
     {
@@ -85,6 +87,10 @@ const faqs = [
             </dl>
           </div>
         </div>
+        <div className="mb-12 mt-20 font-body">
+        <Footerr />
+        </div>
+
       </div>
     )
   }
