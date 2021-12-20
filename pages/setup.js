@@ -19,8 +19,14 @@ const faqs = [
           "Bookmark the setup page because this is how you edit what the OintTag opens.",
     },
     {
-        id: 4,
+        id: 3,
         question: "Step 4.",
+        answer:
+          "Put the OintTag on the bottom of your phone.",
+    },
+    {
+        id: 4,
+        question: "Step 5.",
         answer:
           "Start tapping!",
     },
@@ -29,17 +35,18 @@ const faqs = [
   export default function Setup() {
     return (
       <div className="">
-        <div className="max-w-7xl md:max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:py-16 lg:px-8 font-body">
-          <h2 className="text-6xl text-black text-center mb-12">OintTag Setup</h2>
+        <div className="max-w-6xl md:max-w-2xl mx-auto py-12 px-10 sm:px-6 lg:py-12 font-body">
+          <h2 className="text-5xl text-black text-center mb-12">OintTag Setup</h2>
 
           <div
-        className="sm:hidden"
-        style={{
-          position: "relative",
-          paddingBottom: "56.25%" /* 16:9 */,
-          height: 0,
-        }}
-      >
+            className="sm:hidden flex flex-col items-center"
+            style={{
+            position: "relative",
+            paddingBottom: "56.25%" /* 16:9 */,
+            height: 0,
+            }}
+        >
+
         <iframe
           style={{
             position: "absolute",
@@ -48,17 +55,17 @@ const faqs = [
             width: "100%",
             height: "100%",
           }}
-          src="https://www.youtube.com/embed/eerWmRocBEA"
+          src="https://www.youtube.com/embed/z61Hlvva45Q"
           allowFullScreen
           style={{ border: 0 }}
           sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
         />
       </div>
-      <div className="hidden sm:block">
+      <div className="hidden sm:flex flex-col items-center">
         <iframe
           width="640"
           height="360"
-          src="https://www.youtube.com/embed/eerWmRocBEA"
+          src="https://www.youtube.com/embed/z61Hlvva45Q"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
